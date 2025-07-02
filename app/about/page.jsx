@@ -1,6 +1,72 @@
 import React from "react";
 import PageTitle from "../layout/PageTitle";
 import ProfileCard from "@/lib/components/ui/cards/profile-card";
+import Image from "next/image";
+import CertificateCard from "@/lib/components/ui/cards/certificate-card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/lib/components/ui/tabs/tabs"
+
+const TechCard = ({ name, iconSrc}) => {
+  return (
+    <div className={`w-37 h-auto group bg-card-foreground border border-green-900 shadow-md hover:scale-110 hover:border-green-700 transition-all duration-400 hover:shadow-[inset_0_0_20px_rgba(34,197,94,0.15)]`}>
+    <div className="flex flex-col items-center justify-center p-2">
+        <img
+          src={iconSrc}
+          alt={`${name} icon`}
+          className="w-10 h-10 object-contain"
+        />
+        <span className="text-sm font-medium group-hover:text-white transition-colors duration-300 text-center mt-2">
+            {name}
+        </span>
+    </div>
+</div>
+  );
+};
+
+const progLangs = [
+    { 
+        name: "Python", 
+        iconSrc: "/assets/icons/prog-lang/python_icon.svg",
+    },
+    { 
+        name: "HTML", 
+        iconSrc: "/assets/icons/prog-lang/html5_icon.svg",
+    },
+    { 
+        name: "CSS", 
+        iconSrc: "/assets/icons/prog-lang/css3_icon.svg",
+    },
+    { 
+      name: "JavaScript", 
+      iconSrc: "/assets/icons/prog-lang/js_icon.svg",
+    },
+    { 
+      name: "JavaScript", 
+      iconSrc: "/assets/icons/prog-lang/js_icon.svg",
+    },
+  ];
+
+const frameworks = [
+    { 
+        name: "Laravel", 
+        iconSrc: "/assets/icons/frameworks/laravel_icon.svg",
+    },
+    { 
+        name: "Flutter", 
+        iconSrc: "/assets/icons/frameworks/flutter_icon.svg",
+    },
+];
+
+const otherTech = [
+    { 
+        name: "Git", 
+        iconSrc: "/assets/icons/others/git_icon.svg",
+    },
+    { 
+        name: "Github", 
+        iconSrc: "/assets/icons/others/github_icon.svg",
+    },
+
+]
 
 const Page = () => {
     return (
@@ -10,11 +76,77 @@ const Page = () => {
                 <div className="flex flex-row gap-10">
                     {/* <div className="w-1/3 h-100 bg-primary-foreground">Profile Card</div> */}
                     <ProfileCard />
-                    <div className="w-2/3 h-100 bg-primary-foreground">Info Tabs</div>
+                    {/* <div className="w-2/3 h-100 bg-primary-foreground">Info Tabs</div> */}
+                    <div className="flex w-2/3 flex-col gap-6">
+                        <Tabs defaultValue="skills">
+                            <TabsList>
+                                <TabsTrigger value="skills">Technical Skills</TabsTrigger>
+                                <TabsTrigger value="experience">Experience</TabsTrigger>
+                                <TabsTrigger value="certificates">Certificates</TabsTrigger>
+                            </TabsList>
+                            <TabsContent value="skills">
+                                <div className="bg-card-foreground w-full h-auto p-4 text-muted-foreground rounded-xl">
+                                    <h3 className="text-xl mb-4">Programming Languages</h3>
+                                    <div className="flex flex-row flex-wrap">
+                                        {progLangs.map((tech, index) => (
+                                            <TechCard
+                                                key={index}
+                                                name={tech.name}
+                                                iconSrc={tech.iconSrc}
+                                                bgColor={tech.bgColor}
+                                            />
+                                        ))}
+                                    </div>
+
+                                    <h3 className="text-xl my-4">Frameworks</h3>
+                                    <div className="flex flex-row flex-wrap">
+                                        {frameworks.map((tech, index) => (
+                                            <TechCard
+                                            key={index}
+                                            name={tech.name}
+                                            iconSrc={tech.iconSrc}
+                                            bgColor={tech.bgColor}
+                                            />
+                                        ))}
+                                    </div>
+
+                                    <h3 className="text-xl my-4">Other</h3>
+                                    <div className="flex flex-row flex-wrap">
+                                        {otherTech.map((tech, index) => (
+                                            <TechCard
+                                            key={index}
+                                            name={tech.name}
+                                            iconSrc={tech.iconSrc}
+                                            bgColor={tech.bgColor}
+                                            />
+                                        ))}
+                                    </div>
+                                </div>
+                            </TabsContent>
+                            <TabsContent value="experience">
+                                <div className="bg-card-foreground w-full h-auto p-4 text-muted-foreground rounded-xl">
+                                    <h3>Report Analyst Intern - Automation</h3>
+                                    {/* TODO add tool used as badges */}
+                                    <ul className="list-disc">
+                                        <div className="text-sm pl-8 text-muted">
+                                            <li>Developed programs that automate data extraction and report generation utilizing UiPath</li>
+                                            <li>Developed python scripts to automate different types of payment agreement documents.Streamlined the business process to make data input easier to verify and manipulate.</li>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </TabsContent>
+                            <TabsContent value="certificates">
+                                <div className="bg-card-foreground w-full h-auto p-4 text-muted-foreground rounded-xl">
+                                    <CertificateCard/>
+                                </div>
+                            </TabsContent>
+                        </Tabs>
+                    </div>
                 </div>
             </div>
         </>
     )    
 }
+
 
 export default Page

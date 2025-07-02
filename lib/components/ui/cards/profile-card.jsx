@@ -16,7 +16,6 @@ function CardImage(){
     )
 }
 
-
 const ProfileCard = () => {
   return (
     <>
@@ -33,13 +32,9 @@ const ProfileCard = () => {
                         <p className='text-muted'>Location</p>
                         <p>San Andres, Manila</p>
                     </div>
-                    <div className='text-left'>
+                    <div>
                         <p className='text-muted'>Email</p>
                         <p>jedlaurencedavid@gmail.com</p>
-                    </div>
-                    <div className='text-left'>
-                        <p className='text-muted'>Availability</p>
-                        <p>Open to work</p>
                     </div>
                 </section>
                 <Button className="text-white my-4" variant="outline">Download CV</Button>
