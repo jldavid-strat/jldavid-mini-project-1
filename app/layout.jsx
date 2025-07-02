@@ -1,5 +1,5 @@
 import { Manrope, Rubik  } from "next/font/google";
-import Navbar from "./components/Navbar";
+import Navbar from "./layout/Navbar";
 import "./globals.css";
 
 const rubik = Rubik({
