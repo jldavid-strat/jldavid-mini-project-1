@@ -74,9 +74,7 @@ const Page = () => {
             <div className="px-40 mt-10">
                 <PageTitle title="Get to Know Me"/>
                 <div className="flex gap-10">
-                    {/* <div className="w-1/3 h-100 bg-primary-foreground">Profile Card</div> */}
                     <ProfileCard />
-                    {/* <div className="w-2/3 h-100 bg-primary-foreground">Info Tabs</div> */}
                     <div className="flex w-2/3 flex-col gap-6">
                         <Tabs defaultValue="skills">
                             <TabsList>

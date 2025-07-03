@@ -58,18 +58,20 @@ const Page = () => {
                     </div>
                     <div className="bg-card-foreground p-5 rounded-2xl">
                         <h3 className="text-xl font-bold mb-4">Send me a message</h3>
-                        <div className="my-4">
-                            <Label htmlFor="email">Email</Label>
-                            <Input type="email" placeholder="Enter your email"/>
-                        </div>
-                        <div className="my-4">
-                            <Label htmlFor="name">Name</Label>
-                            <Input type="name" placeholder="Enter your name"/>
-                        </div>
-                        <div className="my-4">
-                            <Label htmlFor="message">Message</Label>
-                            <Textarea placeholder="Type your message here"/>
-                        </div>
+                        <form method="post" action="">
+                            <div className="my-4">
+                                <Label htmlFor="email">Email</Label>
+                                <Input type="email" placeholder="Enter your email"/>
+                            </div>
+                            <div className="my-4">
+                                <Label htmlFor="name">Name</Label>
+                                <Input type="name" placeholder="Enter your name"/>
+                            </div>
+                            <div className="my-4">
+                                <Label htmlFor="message">Message</Label>
+                                <Textarea placeholder="Type your message here"/>
+                            </div>
+                        </form>
                         <div className="mt-8 px-30"><Button variant="outline" className="w-full"> Send </Button></div>
                     </div>
                     
