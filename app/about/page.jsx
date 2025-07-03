@@ -73,7 +73,7 @@ const Page = () => {
         <>
             <div className="px-40 mt-10">
                 <PageTitle title="Get to Know Me"/>
-                <div className="flex flex-row gap-10">
+                <div className="flex gap-10">
                     {/* <div className="w-1/3 h-100 bg-primary-foreground">Profile Card</div> */}
                     <ProfileCard />
                     {/* <div className="w-2/3 h-100 bg-primary-foreground">Info Tabs</div> */}
@@ -135,9 +135,35 @@ const Page = () => {
                                     </ul>
                                 </div>
                             </TabsContent>
-                            <TabsContent value="certificates">
-                                <div className="bg-card-foreground w-full h-auto p-4 text-muted-foreground rounded-xl">
-                                    <CertificateCard/>
+                            <TabsContent value="certificates">  
+                                <div className="bg-card-foreground w-full h-auto p-4 text-muted-foreground">
+                                    <CertificateCard
+                                        src="/assets/icons/certificates/cyber_essentials_badge.png"
+                                        alt="Cybersecurity Essentials Certificate Image"
+                                        provider="Cisco"
+                                        date_issued="Apr 2023"
+                                        title="Cybersecurity Essentials"
+                                        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis praesentium, numquam voluptate provident nihil facere, inventore deserunt itaque, veniam facilis delectus iure corporis culpa. Reprehenderit iste molestiae sapiente odio reiciendis."
+                                        link_to="/"
+                                    />
+                                    <CertificateCard
+                                        src="/assets/icons/certificates/cyber_essentials_badge.png"
+                                        alt="Python Essentials Certificate Image"
+                                        provider="Cisco"
+                                        date_issued="Jun 2024"
+                                        title="Python Essentials"
+                                        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis praesentium, numquam voluptate provident nihil facere, inventore deserunt itaque, veniam facilis delectus iure corporis culpa. Reprehenderit iste molestiae sapiente odio reiciendis."
+                                        link_to="/"
+                                    />
+                                    <CertificateCard
+                                        src="/assets/icons/certificates/cyber_essentials_badge.png"
+                                        alt="ISC2 CC Certificate Image"
+                                        provider="ISC2"
+                                        date_issued="Apr 2023"
+                                        title="ISC2 Candidate"
+                                        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis praesentium, numquam voluptate provident nihil facere, inventore deserunt itaque, veniam facilis delectus iure corporis culpa. Reprehenderit iste molestiae sapiente odio reiciendis."
+                                        link_to="/"
+                                    />
                                 </div>
                             </TabsContent>
                         </Tabs>

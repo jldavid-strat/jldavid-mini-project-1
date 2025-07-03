@@ -1,7 +1,6 @@
 import React from 'react'
 import { 
     Card, 
-    CardTitle,
     CardDescription,
     CardContent,
 } from './card'
@@ -19,7 +18,7 @@ function CardImage(){
 const ProfileCard = () => {
   return (
     <>
-        <Card className="w-1/3 bg-card-foreground min-h-130 p-0 border-0 rounded-xl">
+        <Card className="w-1/3 bg-card-foreground max-h-170 p-0 border-0 rounded-xl">
             <CardImage/>
             <CardContent>
                 <CardDescription className="text-sm font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis praesentium, numquam voluptate provident nihil facere, inventore deserunt itaque, veniam facilis delectus iure corporis culpa. Reprehenderit iste molestiae sapiente odio reiciendis.</CardDescription>
@@ -38,7 +37,6 @@ const ProfileCard = () => {
                     </div>
                 </section>
                 <Button className="text-white my-4" variant="outline">Download CV</Button>
-            
             </CardContent>
 
         </Card>

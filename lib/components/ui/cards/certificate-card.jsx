@@ -9,37 +9,30 @@ import { Button } from '../buttons/button'
 import { Separator } from '../separator'
 import Image from 'next/image'
 
-function CardImage(){
-    return (
-        <div className='bg-gradient-fade-up relative overflow-hidden min-h-80'>
-            <Image className="object-contain" fill src="/assets/images/david_profile_image.png" alt="Jed David Profile Image"/>
-        </div>
-    )
-}
-
-const CertificateCard = () => {
+const CertificateCard = ({src, alt, title, description, date_issued, provider, link_to}) => {
   return (
     <>
-        <Card className="w-full border flex flex-row bg-transparent text-muted-foreground border-green-900 rounded-xl">
-            <div className='w-full min-h-20 relative overflow-hidden'>
-                <Image className='object-contain' fill src="/assets/icons/certificates/cyber_essentials_badge.png" alt="Cybersecurity Essentials"/>
+        <Card className="w-full border flex flex-row bg-transparent text-muted-foreground border-green-900">
+            <div className='w-full ml-8 min-h-20 relative overflow-hidden'>
+                <Image className='object-contain' fill src={src} alt={alt}/>
             </div>
             <CardContent>
-                <CardTitle className="text-xl">Cybersecurity Essentials</CardTitle>
+                <CardTitle className="text-xl">{title}</CardTitle>
                 <div className="flex flex-row gap-3 text-muted text-sm mb-4">
-                    <p>Cisco</p>
+                    <p>{provider}</p>
                     <p>|</p>
-                    <p>Issued on Apr 2023</p>
+                    <p>Issued on {date_issued}</p>
                 </div>
                 <CardDescription className="text-sm font-light mb-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis praesentium, numquam voluptate provident nihil facere, inventore deserunt itaque, veniam facilis delectus iure corporis culpa. Reprehenderit iste molestiae sapiente odio reiciendis.
+                    {description}
                 </CardDescription>
-                <Button variant="outline">See Certificate</Button>
+                <Button variant="outline"><a href={link_to}>See Certificate</a></Button>
             </CardContent>
 
         </Card>
     </>
   )
 }
+
 
 export default CertificateCard

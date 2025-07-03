@@ -1,4 +1,5 @@
 import { ButtonLink } from "@/lib/components/ui/buttons/button-link"
+import Image from "next/image"
 
 export default function Home() {
   return (
@@ -21,8 +22,8 @@ export default function Home() {
 
           </div>
         </div>
-      <div className="w-200 h-100 bg-primary">
-        animated graphic
+      <div className="w-200 h-100 relative">
+        <Image fill src="/assets/gifs/home_page_animation.gif" alt="Home page animation"/>
       </div>
     </div>
     </>
