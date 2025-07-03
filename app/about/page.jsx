@@ -1,9 +1,9 @@
 import React from "react";
 import PageTitle from "../layout/PageTitle";
 import ProfileCard from "@/lib/components/ui/cards/profile-card";
-import Image from "next/image";
 import CertificateCard from "@/lib/components/ui/cards/certificate-card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/lib/components/ui/tabs/tabs"
+import { Badge } from "@/lib/components/ui/badges/badge";
 
 const TechCard = ({ name, iconSrc}) => {
   return (
@@ -125,8 +125,15 @@ const Page = () => {
                             </TabsContent>
                             <TabsContent value="experience">
                                 <div className="bg-card-foreground w-full h-auto p-4 text-muted-foreground rounded-xl">
-                                    <h3>Report Analyst Intern - Automation</h3>
+                                    <h3 className="font-bold"> Report Analyst Intern - Automation</h3>
+                                    <p className="text-sm text-gray-400">S.P Madrid & Associates</p>
+                                    <div className="flex gap-2 my-2">
+                                        <Badge className='bg-green-700'>Python</Badge>
+                                        <Badge className='bg-red-700'>UiPath</Badge>
+                                        <Badge className='bg-blue-700'>VB</Badge>
+                                    </div>
                                     {/* TODO add tool used as badges */}
+                                    
                                     <ul className="list-disc">
                                         <div className="text-sm pl-8 text-muted">
                                             <li>Developed programs that automate data extraction and report generation utilizing UiPath</li>
@@ -147,7 +154,7 @@ const Page = () => {
                                         link_to="/"
                                     />
                                     <CertificateCard
-                                        src="/assets/icons/certificates/cyber_essentials_badge.png"
+                                        src="/assets/icons/certificates/python_essentials_badge.png"
                                         alt="Python Essentials Certificate Image"
                                         provider="Cisco"
                                         date_issued="Jun 2024"
@@ -156,7 +163,7 @@ const Page = () => {
                                         link_to="/"
                                     />
                                     <CertificateCard
-                                        src="/assets/icons/certificates/cyber_essentials_badge.png"
+                                        src="/assets/icons/certificates/isc2_candidate_badge.png"
                                         alt="ISC2 CC Certificate Image"
                                         provider="ISC2"
                                         date_issued="Apr 2023"

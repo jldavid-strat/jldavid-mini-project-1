@@ -3,7 +3,8 @@ import React from "react";
 const Page = () => {
     return (
         <>
-            <div>Projects</div>
+            <div className="px-40 mt-10">
+            </div>
         </>
     )    
 }

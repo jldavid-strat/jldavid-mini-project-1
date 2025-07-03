@@ -2,7 +2,7 @@ import React from "react";
 import PageTitle from "../layout/PageTitle";
 import { Input } from "@/lib/components/ui/inputs/input";
 import { Label } from "@/lib/components/ui/labels/label";
-import { Textarea } from "@/lib/components/textareas/textareas";
+import { Textarea } from "@/lib/components/ui/textareas/textareas";
 import { Button } from "@/lib/components/ui/buttons/button";
 import Image from "next/image";
 
