@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
     <div className="flex flex-row pt-30 px-40 gap-20">
-        <div className="flex flex-col items-start gap-5 font-manrope text-white">
+        <div className="flex flex-col  items-start gap-5 font-manrope text-white">
           <h1 >
             <span className="text-2xl pb-4 block">Hi, I'm</span>
             <span className="text-8xl font-black "><span className="text-primary">Jed</span>David</span>
@@ -16,9 +16,9 @@ export default function Home() {
             and avid gamer
           </p>
           <div>
-              <ButtonLink to="https://linkedin.com" name="LinkedIn"/>
-              <ButtonLink to="https://github.com" name="GitHub"/>
-              <ButtonLink to="https://gmail.com" name="Email"/>
+              <ButtonLink to="https://www.linkedin.com/in/jed-laurence-david/" name="LinkedIn"/>
+              <ButtonLink to="https://www.github.com/jldav1d/" name="GitHub"/>
+              <ButtonLink to="mailto:jedlaurencedavid@gmail.com" name="Email"/>
 
           </div>
         </div>

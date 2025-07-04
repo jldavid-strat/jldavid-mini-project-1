@@ -4,8 +4,9 @@ import { Separator } from '@/lib/components/ui/separator'
 const PageTitle = ({title}) => {
   return (
     <>
-    <h2 className="text-4xl font-bold text-primary text-center">{title}</h2>
-    <Separator className="my-4" orientation="horizontal"/>
+    <h2 className="text-5xl font-bold text-primary hover:text-6xl text-center my-8">{title}</h2>
+
+
     </>
   )
 }

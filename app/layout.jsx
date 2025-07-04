@@ -2,6 +2,12 @@ import { Manrope, Rubik  } from "next/font/google";
 import Navbar from "./layout/Navbar";
 import "./globals.css";
 
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
+
+
+
 const rubik = Rubik({
   weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],

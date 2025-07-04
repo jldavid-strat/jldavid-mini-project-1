@@ -2,40 +2,50 @@ import React from 'react'
 import { 
     Card, 
     CardDescription,
+    CardTitle,
     CardContent,
 } from './card'
-import { Button } from '../buttons/button'
 import { Badge } from '../badges/badge'
 import Image from 'next/image'
+import { ButtonLink } from '../buttons/button-link'
 
 
-function CardImage(){
-    return (
-        <div className='bg-gradient-fade-up relative overflow-hidden min-h-80'>
-            <Image className="object-cover" fill src="/assets/images/projects/jemerators/JEMerators_1.png" alt="JEMerators Screenshot"/>
-        </div>
-    )
-}
-
-const ProjectCard = () => {
+const ProjectCard = ({title, description, skills, tags, imgSrc, imgAlt, slug}) => {
   return (
     <>
-        <Card className="bg-card-foreground max-h-170 p-0 border-0 rounded-5xl">
-            <CardImage/>
-            <CardContent>
-                <CardDescription className="text-sm font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis praesentium, numquam voluptate provident nihil facere, inventore deserunt itaque, veniam facilis delectus iure corporis culpa. Reprehenderit iste molestiae sapiente odio reiciendis.</CardDescription>
-                <div className='flex flex-wrap gap-2 my-4'>
-                    <Badge>Python</Badge>
-                    <Badge className="bg-red-600">Streamlit</Badge>
+        <Card className="bg-card-foreground w-[350px] max-w-[350px] h-130 p-0 border-0 gap-2 mt-8 rounded-2xl shadown-sm transition-all duration-300 hover:shadow-[0_0_10px_4px_rgba(152,205,113,0.4)]">
+            {/* Card Image */}
+            <div className='relative overflow-hidden w-full h-42 rounded-t-xl'>
+                <Image 
+                    className="object-cover" 
+                    fill 
+                    src={imgSrc} 
+                    alt={imgAlt}
+                />
+            </div>
+            <CardContent className="px-4 flex flex-col flex-grow">
+                <CardTitle className="text-muted-foreground text-2xl font-bold mb-2">{title}</CardTitle>
+                <CardDescription className="text-sm font-light">
+                    {description}
+                </CardDescription>
+                <div className='mt-2'>
+                    <div className='pr-4 flex flex-wrap gap-2 my-2'>
+                        {
+                            skills.map((name, index) =>(
+                                <Badge key={index}>{name}</Badge>
+                            ))
+                        }
+                    </div>
+                    <div className='pr-4 flex flex-wrap gap-2 mt-2 mb-4'>
+                        {
+                            tags.map((name, index) =>(
+                                <Badge variant="tags" key={index}>{name}</Badge>
+                            ))
+                        }
+                    </div>
                 </div>
-                <div className='flex flex-wrap gap-2 my-4'>
-                    <Badge variant="tags">Data Analytics</Badge>
-                    <Badge variant="tags">Data Visualization</Badge>
-                    <Badge variant="tags">AI</Badge>
-                </div>
-                <Button className="text-white my-4" variant="outline">View Project</Button>
+                <ButtonLink className="text-white mt-auto mb-4" to={`/projects/${slug}`} name="View Project"/>
             </CardContent>
-
         </Card>
     </>
   )

@@ -40,12 +40,41 @@ const progLangs = [
       iconSrc: "/assets/icons/prog-lang/js_icon.svg",
     },
     { 
-      name: "JavaScript", 
-      iconSrc: "/assets/icons/prog-lang/js_icon.svg",
+      name: "C", 
+      iconSrc: "/assets/icons/prog-lang/c_icon.svg",
     },
+    { 
+      name: "C++", 
+      iconSrc: "/assets/icons/prog-lang/cplusplus_icon.svg",
+    },
+    { 
+      name: "Java", 
+      iconSrc: "/assets/icons/prog-lang/java_icon.svg",
+    },
+    { 
+      name: "PHP", 
+      iconSrc: "/assets/icons/prog-lang/php_icon.svg",
+    },
+    { 
+      name: "Dart", 
+      iconSrc: "/assets/icons/prog-lang/dart_icon.svg",
+    },
+    { 
+      name: "MySQL", 
+      iconSrc: "/assets/icons/prog-lang/mysql_icon.svg",
+    },
+    { 
+      name: "PostgresSQL", 
+      iconSrc: "/assets/icons/prog-lang/postgresql_icon.svg",
+    },
+
   ];
 
 const frameworks = [
+    { 
+        name: "TailwindCSS", 
+        iconSrc: "/assets/icons/frameworks/tailwindcss_icon.svg",
+    },
     { 
         name: "Laravel", 
         iconSrc: "/assets/icons/frameworks/laravel_icon.svg",
@@ -63,7 +92,7 @@ const otherTech = [
     },
     { 
         name: "Github", 
-        iconSrc: "/assets/icons/others/github_icon.svg",
+        iconSrc: "/assets/icons/others/github_white_icon.svg",
     },
 
 ]
@@ -71,7 +100,7 @@ const otherTech = [
 const Page = () => {
     return (
         <>
-            <div className="px-40 mt-10">
+            <div className="px-40 mt-10 mb-8">
                 <PageTitle title="Get to Know Me"/>
                 <div className="flex gap-10">
                     <ProfileCard />
@@ -96,7 +125,7 @@ const Page = () => {
                                         ))}
                                     </div>
 
-                                    <h3 className="text-xl my-4">Frameworks</h3>
+                                    <h3 className="text-xl my-4">Libraries & Frameworks</h3>
                                     <div className="flex flex-row flex-wrap">
                                         {frameworks.map((tech, index) => (
                                             <TechCard
