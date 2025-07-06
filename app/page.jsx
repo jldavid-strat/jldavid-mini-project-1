@@ -20,7 +20,7 @@ export default function Home() {
 
           </div>
         </div>
-      <div className="w-[330px] h-[330px] shrink-0 relative ">
+      <div className="w-[360px] h-[330px] shrink-0 relative ">
         <Image fill className="object-contain" src="/assets/gifs/home_page_animation.gif" alt="Home page animation"/>
       </div>
     </div>
