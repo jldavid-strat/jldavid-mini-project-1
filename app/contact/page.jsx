@@ -33,7 +33,7 @@ const SocialInfoDiv = ({src, alt, name, detail, link_to}) => {
 const Page = () => {
     return (
         <>
-            <div className="mt-10 mb-8">
+            <div className="mt-2 mb-8">
                 <PageTitle title="Let's Connect!"/>
                 <div className="flex justify-center items-center text-muted-foreground mt-12">
                     <div className="max-w-[500px] h-auto text-center bg-card-foreground p-5 rounded-2xl round shadow-md transition-all duration-300 hover:shadow-[0_0_8px_2px_rgba(156,205,113,0.25)]">
