@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         <Navbar/>
         {/* this h1 is shared on every children page */}
         {/* <h1 className="text-3xl">ROOT</h1> */}
-        <main className="flex flex-auto flex-col px-8 md:px-12 py-6 ">{children}</main>
+        <main className="flex flex-auto flex-col px-8 md:px-12 py-6">{children}</main>
       </body>
     </html>
   );

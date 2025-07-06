@@ -25,19 +25,19 @@ export default async function ProjectDetailPage({ params }) {
     console.log(carouselImgs)
 
     return (
-    <div className="px-40 mt-10 mb-8">
+    <div className="mt-10 mb-8">
         <PageTitle title={project.title}/>
         {/* skills */}
         <div className="flex flex-col gap-2">
             <div className="flex flex-col gap-2">
-                <div className="flex gap-2 justify-center items-center">
+                <div className="flex flex-wrap gap-2 justify-center items-center">
                     {
                         project.skills.map((name, index) =>(
                             <Badge key={index} className="text-md">{name}</Badge>
                         ))
                     }
                 </div>
-                <div className="flex gap-2 justify-center items-center">
+                <div className="flex flex-wrap gap-2 justify-center items-center">
                     {
                         project.tags.map((name, index) =>(
                             <Badge key={index} variant="tags" className="text-sm">{name}</Badge>
@@ -60,27 +60,27 @@ export default async function ProjectDetailPage({ params }) {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <CarouselPrevious variant="default"/>
-                    <CarouselNext variant="default" />
+                    <CarouselPrevious className="invisible md:visible" variant="default"/>
+                    <CarouselNext className="invisible md:visible" variant="default" />
                 </Carousel>
             </div>
-            <div className="px-40 mt-4 text-muted-foreground">
-            <div className="flex justify-center text-2xl font bold mb-4">
-                <p className="border border-green-400  rounded-xl p-2">Role: {project.role}</p>
-            </div>
-                <p>{project.extendedDescription}</p>
-                
-                <div className="mt-4">
-                    <h4 className="text-2xl text-primary font-bold">Contributions</h4>
-                    <ul className="pl-10 list-disc">
-                        {
-                            project.contributions.map((name, index) => (
-                                <li key={index}>{name}</li>
-                            ))
-                        }
-                    </ul>
-                </div>     
-            </div>
+            <div className="lg:px-60 mt-4 text-muted-foreground">
+                <div className="flex justify-center text-2xl font bold mb-4">
+                    <p className="border border-green-400  rounded-xl p-2">Role: {project.role}</p>
+                </div>
+                    <p>{project.extendedDescription}</p>
+                    
+                    <div className="mt-4">
+                        <h4 className="text-2xl text-primary font-bold">Contributions</h4>
+                        <ul className="pl-10 list-disc">
+                            {
+                                project.contributions.map((name, index) => (
+                                    <li key={index}>{name}</li>
+                                ))
+                            }
+                        </ul>
+                    </div>     
+                </div>
         </div>
     </div>
   )

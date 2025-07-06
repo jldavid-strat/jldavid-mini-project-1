@@ -106,10 +106,10 @@ const Page = () => {
                     <ProfileCard />
                     <div className="flex w-full lg:w-2/3 flex-col gap-6">
                         <Tabs defaultValue="skills">
-                            <TabsList className={"w-full flex flex-1"}>
-                                <TabsTrigger className={"text-xs lg:text-xl p-1"} value="skills">Technical Skills</TabsTrigger>
-                                <TabsTrigger className={"text-xs lg:text-xl p-1"} value="experience">Experience</TabsTrigger>
-                                <TabsTrigger className={"text-xs lg:text-xl p-1"} value="certificates">Certificates</TabsTrigger>
+                            <TabsList className={"w-full flex flex-1 text-xs lg:text-lg"}>
+                                <TabsTrigger className={"p-1"} value="skills">Technical Skills</TabsTrigger>
+                                <TabsTrigger className={"p-1"} value="experience">Experience</TabsTrigger>
+                                <TabsTrigger className={"p-1"} value="certificates">Certificates</TabsTrigger>
                             </TabsList>
                             <TabsContent value="skills">
                                 <div className="bg-card-foreground w-full h-auto p-4 text-muted-foreground">
@@ -194,8 +194,8 @@ const Page = () => {
                                         alt="ISC2 CC Certificate Image"
                                         provider="ISC2"
                                         date_issued="Apr 2023"
-                                        title="ISC2 Candidate"
-                                        description="(Passed, but did not pay for the certificate) An entry-level certification covering cybersecurity fundamentals, threat management, risk mitigation, incident response, and security principles, ideal for beginners seeking foundational knowledge and a globally recognized credential."
+                                        title="Certified in Cybersecurity Passer"
+                                        description="Provisionally passed an entry-level certification covering cybersecurity fundamentals, threat management, risk mitigation, incident response, and security principles, ideal for beginners seeking foundational knowledge and a globally recognized credential."
                                         link_to="/"
                                     />
                                 </div>

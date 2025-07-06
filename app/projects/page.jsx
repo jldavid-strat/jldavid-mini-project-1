@@ -8,7 +8,7 @@ import { projectDetail } from "@/app/shared/projectDetails"
 const Page = () => {
     return (
         <>
-            <div className="px-40 mt-4 mb-8">
+            <div className="mt-4 mb-8">
                 <PageTitle 
                     title="Some of my previous works"
                 />
