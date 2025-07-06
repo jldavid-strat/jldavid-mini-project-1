@@ -24,7 +24,6 @@ Follow the instructions below to set-up this application.
    ```
 2. Install NPM necessary packages and dependencies
    ```sh
-   cd client
    npm install
    ```
 3. Run the development server
