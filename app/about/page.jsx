@@ -7,7 +7,7 @@ import { Badge } from "@/lib/components/ui/badges/badge";
 
 const TechCard = ({ name, iconSrc}) => {
   return (
-    <div className={`w-37 h-auto group bg-card-foreground border border-green-900 shadow-md hover:scale-110 hover:border-green-700 transition-all duration-400 hover:shadow-[inset_0_0_20px_rgba(34,197,94,0.15)]`}>
+    <div className={`w-25 h-auto group bg-card-foreground border border-green-900 shadow-md hover:scale-110 hover:border-green-700 transition-all duration-400 hover:shadow-[inset_0_0_20px_rgba(34,197,94,0.15)]`}>
     <div className="flex flex-col items-center justify-center p-2">
         <img
           src={iconSrc}
@@ -100,21 +100,21 @@ const otherTech = [
 const Page = () => {
     return (
         <>
-            <div className="px-40 mt-10 mb-8">
+            <div className="mb-8 lg:mx-20 xl:mx-25">
                 <PageTitle title="Get to Know Me"/>
-                <div className="flex gap-10">
+                <div className="flex flex-col md:flex-row justify-between w-full gap-10">
                     <ProfileCard />
-                    <div className="flex w-2/3 flex-col gap-6">
+                    <div className="flex w-full lg:w-2/3 flex-col gap-6">
                         <Tabs defaultValue="skills">
-                            <TabsList>
-                                <TabsTrigger value="skills">Technical Skills</TabsTrigger>
-                                <TabsTrigger value="experience">Experience</TabsTrigger>
-                                <TabsTrigger value="certificates">Certificates</TabsTrigger>
+                            <TabsList className={"w-full flex flex-1"}>
+                                <TabsTrigger className={"text-xs lg:text-xl p-1"} value="skills">Technical Skills</TabsTrigger>
+                                <TabsTrigger className={"text-xs lg:text-xl p-1"} value="experience">Experience</TabsTrigger>
+                                <TabsTrigger className={"text-xs lg:text-xl p-1"} value="certificates">Certificates</TabsTrigger>
                             </TabsList>
                             <TabsContent value="skills">
-                                <div className="bg-card-foreground w-full h-auto p-4 text-muted-foreground rounded-xl">
+                                <div className="bg-card-foreground w-full h-auto p-4 text-muted-foreground">
                                     <h3 className="text-xl mb-4">Programming Languages</h3>
-                                    <div className="flex flex-row flex-wrap">
+                                    <div className="flex flex-wrap">
                                         {progLangs.map((tech, index) => (
                                             <TechCard
                                                 key={index}
@@ -170,14 +170,14 @@ const Page = () => {
                                 </div>
                             </TabsContent>
                             <TabsContent value="certificates">  
-                                <div className="bg-card-foreground w-full h-auto p-4 text-muted-foreground">
+                                <div className="bg-card-foreground h-auto p-4 text-muted-foreground">
                                     <CertificateCard
                                         src="/assets/icons/certificates/cyber_essentials_badge.png"
                                         alt="Cybersecurity Essentials Certificate Image"
                                         provider="Cisco"
                                         date_issued="Apr 2023"
                                         title="Cybersecurity Essentials"
-                                        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis praesentium, numquam voluptate provident nihil facere, inventore deserunt itaque, veniam facilis delectus iure corporis culpa. Reprehenderit iste molestiae sapiente odio reiciendis."
+                                        description="Covers core cybersecurity concepts including network security, cryptography, system vulnerabilities, and cyberattack methods. Prepares learners to understand modern threats and develop defensive strategies across various digital environments."
                                         link_to="/"
                                     />
                                     <CertificateCard
@@ -186,7 +186,7 @@ const Page = () => {
                                         provider="Cisco"
                                         date_issued="Jun 2024"
                                         title="Python Essentials"
-                                        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis praesentium, numquam voluptate provident nihil facere, inventore deserunt itaque, veniam facilis delectus iure corporis culpa. Reprehenderit iste molestiae sapiente odio reiciendis."
+                                        description="A beginner-focused course Python syntax, data types, control flow, functions, and basic object-oriented programming. It builds problem-solving skills through hands-on coding exercises and practical programming tasks"
                                         link_to="/"
                                     />
                                     <CertificateCard
@@ -195,7 +195,7 @@ const Page = () => {
                                         provider="ISC2"
                                         date_issued="Apr 2023"
                                         title="ISC2 Candidate"
-                                        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis praesentium, numquam voluptate provident nihil facere, inventore deserunt itaque, veniam facilis delectus iure corporis culpa. Reprehenderit iste molestiae sapiente odio reiciendis."
+                                        description="(Passed, but did not pay for the certificate) An entry-level certification covering cybersecurity fundamentals, threat management, risk mitigation, incident response, and security principles, ideal for beginners seeking foundational knowledge and a globally recognized credential."
                                         link_to="/"
                                     />
                                 </div>

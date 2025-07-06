@@ -6,8 +6,6 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
-
-
 const rubik = Rubik({
   weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],
@@ -34,7 +32,7 @@ export default function RootLayout({ children }) {
         <Navbar/>
         {/* this h1 is shared on every children page */}
         {/* <h1 className="text-3xl">ROOT</h1> */}
-        {children}
+        <main className="flex flex-auto flex-col px-8 md:px-12 py-6 ">{children}</main>
       </body>
     </html>
   );

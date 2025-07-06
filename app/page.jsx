@@ -4,16 +4,14 @@ import Image from "next/image"
 export default function Home() {
   return (
     <>
-    <div className="flex flex-row pt-30 px-40 gap-20">
-        <div className="flex flex-col  items-start gap-5 font-manrope text-white">
+    <div className="flex flex-col md:flex-row md:justify-center lg:mx-40 xl:mx-50 items-center gap-10">
+        <div className="flex flex-col items-start gap-4 font-manrope text-white h-full max-w-[500px]">
           <h1 >
-            <span className="text-2xl pb-4 block">Hi, I'm</span>
-            <span className="text-8xl font-black "><span className="text-primary">Jed</span>David</span>
+            <span className="text-2xl md:text-4xl pb-2 block">Hi, I'm</span>
+            <span className="text-5xl md:text-7xl lg:text-8xl font-black "><span className="text-primary">Jed</span>David</span>
           </h1>
-          <p className=" pt-4 subtitle-gray text-lg">
-            An aspiring software developer who likes problem-solving,
-            with a keen interest in networks and cybersecurity,
-            and avid gamer
+          <p className="pr-4 subtitle-gray text-lg">
+            An aspiring software developer whole likes <span className="text-primary font-bold">building random programs</span>, problem solving, and has a strong interest in networking and cybersecurity and ... <span className="text-xl">🎮</span> <span className="italic">also an avid gamer</span>.
           </p>
           <div>
               <ButtonLink to="https://www.linkedin.com/in/jed-laurence-david/" name="LinkedIn"/>
@@ -22,10 +20,10 @@ export default function Home() {
 
           </div>
         </div>
-      <div className="w-200 h-100 relative">
-        <Image fill src="/assets/gifs/home_page_animation.gif" alt="Home page animation"/>
+      <div className="w-[330px] h-[330px] shrink-0 relative ">
+        <Image fill className="object-contain" src="/assets/gifs/home_page_animation.gif" alt="Home page animation"/>
       </div>
     </div>
-    </>
+    </> 
   ) 
 }

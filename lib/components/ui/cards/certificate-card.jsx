@@ -12,13 +12,13 @@ import Image from 'next/image'
 const CertificateCard = ({src, alt, title, description, date_issued, provider, link_to}) => {
   return (
     <>
-        <Card className="w-full border flex flex-row bg-transparent text-muted-foreground border-green-900">
-            <div className='w-full ml-8 min-h-20 relative overflow-hidden'>
-                <Image className='object-contain' fill src={src} alt={alt}/>
+        <Card className="border flex flex-col lg:flex-row bg-transparent justify-center items-center text-muted-foreground border-green-900">
+            <div className='min-w-[100px] h-[100px] lg:ml-8 relative'>
+                <Image className='object-cover' fill src={src} alt={alt}/>
             </div>
             <CardContent>
                 <CardTitle className="text-xl">{title}</CardTitle>
-                <div className="flex flex-row gap-3 text-muted text-sm mb-4">
+                <div className="flex flex-row gap-3 text-muted text-xs md:text-sm mb-4">
                     <p>{provider}</p>
                     <p>|</p>
                     <p>Issued on {date_issued}</p>
