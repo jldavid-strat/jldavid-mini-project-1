@@ -10,7 +10,7 @@ A multi-page personal portfolio website made to showcase my skills, certificatio
 
 <!-- GETTING STARTED -->
 
-## ✨ Getting Started
+## Getting Started
 
 To get a local copy up and running follow these steps.
 
